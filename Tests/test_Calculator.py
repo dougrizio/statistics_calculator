@@ -57,12 +57,12 @@ class MyTestCase(unittest.TestCase):
 
     @staticmethod
     def CsvReader(filepath):
-        objects = []
+        rows = []
         with open(filepath) as text_data:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
-                objects.append(row)
-        return objects
+                rows.append(row)
+        return rows
 
 if __name__ == '__main__':
     unittest.main()

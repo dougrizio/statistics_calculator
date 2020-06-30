@@ -1,5 +1,5 @@
 FROM python:3
 
-ADD Tests /tests
+ADD . .
 
-CMD [ "python", "./tests/CalculatorTests.py"]
+CMD ["python", "-m", "unittest", "discover", "-s", "/Tests"]

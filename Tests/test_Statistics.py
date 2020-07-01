@@ -38,8 +38,8 @@ class MyTestCase(unittest.TestCase):
 
         data = []
         for row in test_sample_data:
-            data.append(float(row['Value 1']))
-        self.assertEqual(len(self.statistics.get_simple_sample(data)), 5 )
+            data.append(row['Value'])
+        self.assertEqual(len(self.statistics.get_simple_sample(data)), 6 )
 
 
 

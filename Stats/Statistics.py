@@ -14,5 +14,6 @@ class Statistics(Calculator):
         return self.result
 
     def get_simple_sample(self, data):
-        self.result = get_sample(data, sample_size = 3)
+        sample_size = 6
+        self.result = get_sample(data, sample_size)
         return self.result

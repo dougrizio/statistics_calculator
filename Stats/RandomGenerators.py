@@ -54,12 +54,12 @@ def random_seed_choice():
 
 
   #for seed and not seed
-def n_items_no_seed(test_list, choices = 10, seed = None):
+def n_items_no_seed(test_list, sample_size, seed = None):
 
       if seed is not None:
           random.seed(seed)
 
-      number_of_choices = choices
+      number_of_choices = sample_size
 
       #test_list = list_generator(seed)
 

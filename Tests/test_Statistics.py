@@ -4,6 +4,16 @@ from Stats.Statistics import Statistics
 from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
+
+    @staticmethod
+    def CsvReader(filepath):
+        data = []
+        with open(filepath) as text_data:
+            csv_data = csv.DictReader(text_data, delimiter=',')
+            for row in csv_data:
+                data.append(row)
+        return data
+
     def setUp(self) -> None:
         self.statistics = Statistics()
 
@@ -14,8 +24,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.result, 0)
 
     def test_mean(self):
-        test_mean_data = MyTestCase.CsvReader('/Tests/Data/ut_mean1.csv')
-        test_mean_answer = MyTestCase.CsvReader('/Tests/Data/ut_mean2.csv')
+        test_mean_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_mean_answer = MyTestCase.CsvReader('/Tests/Data/ut_mean.csv')
         data = []
         for row in test_mean_data:
             data.append(float(row['Value']))
@@ -33,14 +43,29 @@ class MyTestCase(unittest.TestCase):
                 # dataset = list(test_mean_data)
                     # print(dataset[1])
 
-    @staticmethod
-    def CsvReader(filepath):
+    def test_median(self):
+        test_median_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
         data = []
-        with open(filepath) as text_data:
-            csv_data = csv.DictReader(text_data, delimiter=',')
-            for row in csv_data:
-                data.append(row)
-        return data
+        for row in test_median_data:
+            data.append(float(row['Value']))
+            print(row['Value'])
+
+    #def test_median(self):
+        #test_median_data = [line for line in (MyTestCase.CsvReader('/Tests/Data/ut_floats.csv'))]
+        #for line in test_median_data:
+            #numbers = [float(x) for x in line]
+            #sum = 0
+            #for number in numbers:
+                #sum = sum + number
+            #print(numbers)
+            #print("The sum of numbers is: ", sum)
+
+    #def test_median(self):
+        #test_median_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        #data = []
+        #for row in test_median_data:
+            #data.extend(float(row['Value']))
+            #print(self.statistics.get_median(data))
 
 if __name__ == '__main__':
     unittest.main()

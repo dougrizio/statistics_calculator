@@ -1,5 +1,6 @@
 from Calc.Calculator import Calculator
-from Stats.Mean import mean
+from Mean import mean
+from Median import median
 
 class Statistics(Calculator):
 
@@ -10,4 +11,8 @@ class Statistics(Calculator):
 
     def get_mean(self, data):
         self.result = mean(data)
+        return self.result
+
+    def get_median(self, data):
+        self.result = median(data)
         return self.result

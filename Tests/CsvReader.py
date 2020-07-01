@@ -20,4 +20,3 @@ class CsvReader:
             objects.append(ClassFactory(class_name, row))
         return objects
 
-

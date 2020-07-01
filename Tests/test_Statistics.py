@@ -1,6 +1,9 @@
 import csv
 import unittest
 from Stats.Statistics import Statistics
+from Calc.Addition import addition
+from Calc.Subtraction import subtraction
+from Calc.Division import division
 from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
@@ -25,14 +28,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_mean(self):
         test_mean_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
-        test_mean_answer = MyTestCase.CsvReader('/Tests/Data/ut_mean.csv')
+        test_mean_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
         data = []
         for row in test_mean_data:
             data.append(float(row['Value']))
         for row in test_mean_answer:
-            answer = float(row['Value 1'])
+            answer = float(row['Mean'])
             self.assertEqual(self.statistics.get_mean(data), answer)
-            self.assertEqual(self.statistics.result, float(row['Value 1']))
+            self.assertEqual(self.statistics.result, float(row['Mean']))
 
         # POTENTIAL CHANGES
             # use random number generator to populate csv?
@@ -48,7 +51,9 @@ class MyTestCase(unittest.TestCase):
         data = []
         for row in test_median_data:
             data.append(float(row['Value']))
-            print(row['Value'])
+        data_slice = data[0:100]
+        print(self.statistics.get_median(data_slice))
+
 
     #def test_median(self):
         #test_median_data = [line for line in (MyTestCase.CsvReader('/Tests/Data/ut_floats.csv'))]

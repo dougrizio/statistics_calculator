@@ -31,7 +31,17 @@ class MyTestCase(unittest.TestCase):
 
             # may also be able to use:
                 # dataset = list(test_mean_data)
-                    # print(dataset[1])
+                # print(dataset[1])
+
+    def test_simple_sample(self):
+        test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_mean1.csv')
+
+        data = []
+        for row in test_sample_data:
+            data.append(float(row['Value 1']))
+        self.assertEqual(len(self.statistics.get_simple_sample(data)), 5 )
+
+
 
     @staticmethod
     def CsvReader(filepath):

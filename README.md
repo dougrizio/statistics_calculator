@@ -54,7 +54,7 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 | DOUG | | | Mean Unit Test
 | MIKE | | | Random Number Generator |
 | MIKE | | | Random Gen Unit Test |
-| MIKE |Simple Random Sampling | | |
+| MIKE | |Simple Random Sampling | |
 | MIKE |CI Sample | | |
 | MIKE |Margin of Error | | |
 | MIKE |Cochran’s Sample Size Formula | | |

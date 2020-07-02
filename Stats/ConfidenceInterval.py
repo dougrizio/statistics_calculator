@@ -40,8 +40,8 @@ def confidence_interval(sample):
 
    interval = calc.multiply(ci, t_distribution)
 
-   lower_end = sample_mean - interval
-   upper_end = sample_mean + interval
+   lower_end = calc.subtract(interval, sample_mean)
+   upper_end = calc.add(interval,sample_mean)
 
 
 
@@ -56,7 +56,7 @@ def confidence_interval(sample):
    print("sample deviation:" + str(sample_deviation))
    print (conf)
    print(interval)
-   print("Confidence interval")
+   print("----------------Confidence interval----------------------")
    print(lower_end)
    print(upper_end)
 

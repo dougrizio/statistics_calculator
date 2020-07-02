@@ -37,8 +37,6 @@ def list_generator(seed, decimal = 1, start = 0, stop = 100):
 
   #attach CSV reader?
 def random_item():
-
-
       # used above function for testing
      test_list = list_generator(12)
 
@@ -56,14 +54,14 @@ def random_seed_choice():
 
 
   #for seed and not seed
-def n_items_no_seed(choices, seed = None):
+def n_items_no_seed(test_list, sample_size, seed = None):
 
       if seed is not None:
           random.seed(seed)
 
-      number_of_choices = choices
+      number_of_choices = sample_size
 
-      test_list = list_generator(seed)
+      #test_list = list_generator(seed)
 
       sample = random.choices(test_list, k=number_of_choices)
       return sample
@@ -74,6 +72,7 @@ def n_items_no_seed(choices, seed = None):
 # change to what func you want to test
 msg = random_item()
 print(msg)
+
 
 
 

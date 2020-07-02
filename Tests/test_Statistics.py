@@ -44,7 +44,20 @@ class MyTestCase(unittest.TestCase):
 
             # may also be able to use:
                 # dataset = list(test_mean_data)
-                    # print(dataset[1])
+                # print(dataset[1])
+
+    def test_simple_sample(self):
+
+        print("-------------Simple Sample Test--------------")
+        test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_mean1.csv')
+
+        data = []
+
+        for row in test_sample_data:
+            data.append(row['Value'])
+        self.assertEqual(len(self.statistics.get_simple_sample(data)), 6 )
+
+
 
     def test_median(self):
         test_median_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')

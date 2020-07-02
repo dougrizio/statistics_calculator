@@ -1,5 +1,5 @@
-from Addition import addition
-from Division import division
+from Calc.Addition import addition
+from Calc.Division import division
 
 def median(data):
     numValues = len(data) - 1

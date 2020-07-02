@@ -1,10 +1,8 @@
 import csv
 import unittest
 from Stats.Statistics import Statistics
-from Calc.Addition import addition
-from Calc.Subtraction import subtraction
-from Calc.Division import division
-from pprint import pprint
+from Calc.Calculator import Calculator
+
 
 class MyTestCase(unittest.TestCase):
 
@@ -49,7 +47,7 @@ class MyTestCase(unittest.TestCase):
     def test_simple_sample(self):
 
         print("-------------Simple Sample Test--------------")
-        test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_mean1.csv')
+        test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
 
         data = []
 

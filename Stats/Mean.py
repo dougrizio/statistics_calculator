@@ -7,4 +7,3 @@ def mean(data):
     for num in data:
         total = addition(total, num)
     return division(num_values, total)
-

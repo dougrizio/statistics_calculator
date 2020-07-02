@@ -1,2 +1,2 @@
 def squaring(a):
-    return int(a) * int(a)
+    return float(a) * float(a)

@@ -1,2 +1,2 @@
 def multiplication(a, b):
-    return int(a) * int(b)
+    return float(a) * float(b)

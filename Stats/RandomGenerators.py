@@ -70,7 +70,11 @@ def n_items_no_seed(test_list, sample_size, seed = None):
 
 
 # change to what func you want to test
+data = list_generator(decimal = 0, stop = 15)
+msg = n_items_no_seed(data, sample_size = 7)
 
+print("Sample_list: " + str(data))
+print("Selections: " + str(msg))
 
 
 

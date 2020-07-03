@@ -136,6 +136,18 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * result:
 	        
 	        ![random item](/images/random_choice.PNG)
+	    * n_items_no_seed
+	        * returns a number of choices based on passed in attribute from calling function
+	        * can be used with or without a seed.
+	        * usage: n_items_no_seed(test_list, sample_size, seed = None)
+	            * test_list can be passed in or generated 
+	            * sample_size is the number of choices requested
+	            * seed value is depends on whether or not a seed value is requested or needed
+	                * no seed is default value
+	        * result:
+	        
+	        ![n_item_no_seed](/images/n_items_no_seed.PNG)
+	        
 	        
 	                
 	

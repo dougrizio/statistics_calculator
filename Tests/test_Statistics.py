@@ -1,7 +1,14 @@
 import csv
 import unittest
 from Stats.Statistics import Statistics
-from Calc.Calculator import Calculator
+from collections import Counter
+
+from Calc.Addition import addition
+from Calc.Subtraction import subtraction
+from Calc.Multiplication import multiplication
+from Calc.Division import division
+from Calc.Squaring import squaring
+from Calc.Squarerooting import squarerooting
 
 
 class MyTestCase(unittest.TestCase):
@@ -55,33 +62,17 @@ class MyTestCase(unittest.TestCase):
             data.append(row['Value'])
         self.assertEqual(len(self.statistics.get_simple_sample(data)), 6 )
 
-
-
     def test_median(self):
         test_median_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_median_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
         data = []
         for row in test_median_data:
             data.append(float(row['Value']))
         data_slice = data[0:100]
-        print(self.statistics.get_median(data_slice))
-
-
-    #def test_median(self):
-        #test_median_data = [line for line in (MyTestCase.CsvReader('/Tests/Data/ut_floats.csv'))]
-        #for line in test_median_data:
-            #numbers = [float(x) for x in line]
-            #sum = 0
-            #for number in numbers:
-                #sum = sum + number
-            #print(numbers)
-            #print("The sum of numbers is: ", sum)
-
-    #def test_median(self):
-        #test_median_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
-        #data = []
-        #for row in test_median_data:
-            #data.extend(float(row['Value']))
-            #print(self.statistics.get_median(data))
+        for row in test_median_answer:
+            answer = float(row['Median'])
+            self.assertEqual(self.statistics.get_median(data_slice), answer)
+            self.assertEqual(self.statistics.result, float(row['Median']))
 
 if __name__ == '__main__':
     unittest.main()

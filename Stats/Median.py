@@ -1,12 +1,18 @@
 from Calc.Addition import addition
+from Calc.Subtraction import subtraction
 from Calc.Division import division
 
 def median(data):
-    numValues = len(data) - 1
     data.sort()
-    median1 = float(division(2, data[numValues]))
-    median2 = float(division(2, data[numValues - 1]))
+
+    numValues = len(data)
+    indexValues = int(subtraction(1, numValues))
+
+    midNum = int(division(2, indexValues))
+
     if numValues % 2 == 0:
-        return division(2, (addition(median1, median2)))
+        midNumTwo = int(addition(1, midNum))
+        twoMids = addition(data[midNum], data[midNumTwo])
+        return division(2, twoMids)
     else:
-        return division(2, median1)
+        return data[midNum]

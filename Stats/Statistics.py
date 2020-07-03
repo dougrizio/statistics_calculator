@@ -17,9 +17,11 @@ class Statistics(Calculator):
 
     def get_median(self, data):
         self.result = median(data)
+        return self.result
 
     def get_mode(self, data):
         self.result = mode(data)
+        return self.result
 
     def get_simple_sample(self, data):
         sample_size = 6

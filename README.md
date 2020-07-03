@@ -45,13 +45,20 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 		* Result
 	* Methods 
 	    * get_mean
-	        * returns the mean value of a data set.
-	            * sample usage 
-	                * result = get_mean(data)
-	                * ![bb](/images/mean.PNG)
+	        * calls mean static method
+	    * get_median
+	        * calls median static method
+	    * get_mode
+	        * calls mode static method
+	    * get_simple sample
+	        * call sample static method
+	    * get_confidence_interval
+	        * calls confidence interval
+	
+	       
 	                
 	
-            
+![mean](/images/mean.PNG)   
 ### To Do List
 | | To Do | In Progress | Review | Done |
 |---|---|---|---|---|

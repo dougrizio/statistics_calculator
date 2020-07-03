@@ -45,8 +45,19 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 | | To Do | In Progress | Review | Done |
 |---|---|---|---|---|
 | DOUG | | | | Upload original calculator files |
-| DOUG | | Developing methods for Mean, Median, Mode | |  
-| DOUG | | Developing unit tests for Mean, Median, Mode | | |
-| DOUG | | Creating addition method for adding lists | | | 
+| DOUG | Develop methods/tests for Median | | |
+| DOUG | Develop methods/tests for Mode | | |
+| DOUG | Develop methods/tests for Variance | | |
+| DOUG | Develop methods/tests for Standard Deviation | | |
+| DOUG | Develop methods/tests for Z-Score | | |
+| DOUG | | | Mean Method |
+| DOUG | | | Mean Unit Test
 | MIKE | | | Random Number Generator |
-| MIKE | | | Unit Test for Random Gen |
+| MIKE | | | Random Gen Unit Test |
+| MIKE | | | Simple Random Sampling|
+| MIKE | | |Confidence Interval |
+| MIKE |Margin of Error | | |
+| MIKE |Cochran’s Sample Size Formula | | |
+| MIKE |Find a Sample Size Given a Confidence Interval and Width | | |
+
+

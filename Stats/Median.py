@@ -2,6 +2,8 @@ from Calc.Addition import addition
 from Calc.Subtraction import subtraction
 from Calc.Division import division
 
+
+
 def median(data):
     data.sort()
 
@@ -16,3 +18,4 @@ def median(data):
         return division(2, twoMids)
     else:
         return data[midNum]
+

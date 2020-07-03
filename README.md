@@ -60,10 +60,22 @@ IS 601850 - Team Project 2 - Stats Calculator Group
     
 * Create statistics methods
     * get_mean
-        * This take a sample data and return the mean
+        * get_mean method takes a sample data and return the mean
+        * formula : _sum of terms / number of terms_
         * usage: get_mean(data) 
         * sample result:
+        
         ![mean](/images/mean.PNG)  
+    * get_median 
+       * get_median method takes a sample data set and returns the median
+       * formula: 
+       * data is ordered
+       * for an odd amount of values it is the middle value
+       * For a data set with an even amount of values it is the average of the middle tow numbers
+       * usage get_median(data)
+       * sample result:
+       
+       ![median](/images/median.PNG) 
         
 	       
 	                

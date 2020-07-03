@@ -71,7 +71,7 @@ def n_items_no_seed(test_list, sample_size, seed = None):
 
 # change to what func you want to test
 msg = random_item()
-print(msg)
+
 
 
 

@@ -83,8 +83,15 @@ IS 601850 - Team Project 2 - Stats Calculator Group
         * sample result: 
         
         ![mode](/images/mode.PNG)
-         
-        
+    * get_simple sample
+       * get_simple_sample takes a data set and the amount of choices needed as input
+       * it calls the simple_sample utility static method
+         * This in turn calls the n_items_no_seed from the RandomGenerators.py module
+            THis can be called with or with out a seed value
+       * usage: get_sample(data, number_of_choices)
+       * The returned value is a pseudo-random selection based on the number of choices provided
+           
+       ![simple_sample](/images/simple_sample.PNG)
          
 	       
 	                

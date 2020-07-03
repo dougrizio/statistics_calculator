@@ -51,6 +51,9 @@ def confidence_interval(sample):
 
 
 
+
+
+''' For testing only
    print(sample_size)
    print(sample_mean)
    print(subtract_mean_result)
@@ -64,7 +67,7 @@ def confidence_interval(sample):
    print(lower_end)
    print(upper_end)
 
+'''
 
-confidence_interval(population)
 
 

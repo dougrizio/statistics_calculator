@@ -86,12 +86,14 @@ class MyTestCase(unittest.TestCase):
             #print(self.statistics.get_median(data))
 
     def test_confidence_interval(self):
-        sample = list_generator(seed = 0, decimal = 0)
-        self.result = self.statistics.get_confidence_interval(sample)
+        #for testing
+        population = [1, 5, 9, 5, 3, 1, 8, 8]
+        # sample = list_generator(seed = 0, decimal = 0)
+        self.result = self.statistics.get_confidence_interval(population)
         print("------CI Test------")
         self.assertEqual(len(self.result), 2)
-
-
+        self.assertEqual(self.result[0], 2.471007117447738)
+        self.assertEqual(self.result[1], 7.528992882552262)
 
 
 

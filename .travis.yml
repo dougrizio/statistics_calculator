@@ -10,3 +10,4 @@ script:
 branches:
   only:
     - margin_of_error
+    - master

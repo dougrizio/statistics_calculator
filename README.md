@@ -107,7 +107,7 @@ IS 601850 - Team Project 2 - Stats Calculator Group
     * RandomGenerators.py
         * random_seed 
             * create a random number based on parameters
-                * seed value - can generate a vlue with wor without a seed
+                * seed value - can generate a value with wor without a seed
                 * decimal - determines whether generated number should be an integer or a float.
                 * start - starting value range
                 * stop - ending value range
@@ -118,8 +118,25 @@ IS 601850 - Team Project 2 - Stats Calculator Group
             
             ![random_seed](/images/random_seed.PNG)
         
-         
-	       
+        * list generator
+            * creates a list of random values based on parameters
+                * seed value - can generate a value with wor without a seed
+                * decimal - determines whether generated number should be an integer or a float.
+                * start - starting value range
+                * stop - ending value range
+            * usage: list_generator(seed, decimal = 1, start = 0, stop = 100)
+            * result: 
+            
+            ![list_generator](/images/list_generator.PNG)
+            
+	    * random_item
+	        * chooses a random selected value from a data set.
+	        * usage: random_item(data)
+	        * return a pseudo-random value
+	        * result:
+	        
+	        ![random item](/images/random_choice.PNG)
+	        
 	                
 	
  

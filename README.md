@@ -54,11 +54,21 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * call sample static method
 	    * get_confidence_interval
 	        * calls confidence interval
-	
+* Task breakdown
+
+    The starting point will be the orignal Calculator. This will be extended to create the Statistics class object.
+    
+* Create statistics methods
+    * get_mean
+        * This take a sample data and return the mean
+        * usage: get_mean(data) 
+        * sample result:
+        ![mean](/images/mean.PNG)  
+        
 	       
 	                
 	
-![mean](/images/mean.PNG)   
+ 
 ### To Do List
 | | To Do | In Progress | Review | Done |
 |---|---|---|---|---|

@@ -40,6 +40,16 @@ IS 601850 - Team Project 2 - Stats Calculator Group
         * Squarerooting
             * Methods
                 * Use .sqrt function to find the square root of a number
+* Statistics Object 
+	* Properties	
+		* Result
+	* Methods 
+	    * get_mean
+	        * returns the mean value of a data set.
+	            * sample usage 
+	                * result = get_mean(data)
+	                * ![mean result](/images/mean.PNG)
+	
             
 ### To Do List
 | | To Do | In Progress | Review | Done |

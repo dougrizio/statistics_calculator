@@ -1,16 +1,17 @@
 
 from Calc.Calculator import Calculator
-from Stats.Statistics import Statistics
+from Stats.Mean import mean
 
 population = [1, 5, 9, 5, 3, 1, 8, 8]
 
 
 def confidence_interval(sample):
    calc = Calculator()
-   stats = Statistics()
+   result = []
+
 
    sample_size = len(sample) - 1
-   sample_mean = stats.get_mean(population)
+   sample_mean = mean(sample)
    subtract_mean_result = []
    squared_list = []
    total = 0
@@ -43,6 +44,9 @@ def confidence_interval(sample):
    lower_end = calc.subtract(interval, sample_mean)
    upper_end = calc.add(interval,sample_mean)
 
+   result = [lower_end, upper_end]
+   return result
+
 
 
 
@@ -61,6 +65,6 @@ def confidence_interval(sample):
    print(upper_end)
 
 
-
 confidence_interval(population)
+
 

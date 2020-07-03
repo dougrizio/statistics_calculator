@@ -1,7 +1,9 @@
 import csv
 import unittest
 from Stats.Statistics import Statistics
+from Stats.RandomGenerators import list_generator
 from Calc.Calculator import Calculator
+
 
 
 class MyTestCase(unittest.TestCase):
@@ -82,6 +84,16 @@ class MyTestCase(unittest.TestCase):
         #for row in test_median_data:
             #data.extend(float(row['Value']))
             #print(self.statistics.get_median(data))
+
+    def test_confidence_interval(self):
+        sample = list_generator(seed = 0, decimal = 0)
+        self.result = self.statistics.get_confidence_interval(sample)
+        print("------CI Test------")
+        self.assertEqual(len(self.result), 2)
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

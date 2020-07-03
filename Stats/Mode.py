@@ -1,5 +1,7 @@
 from collections import Counter
 
+
+
 def mode(data):
     mostOften = Counter(data)
     get_mode = dict(mostOften)
@@ -14,3 +16,4 @@ def mode(data):
         return "Multiple modes found"
     else:
         return float(modeResult[0])
+

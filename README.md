@@ -72,11 +72,20 @@ IS 601850 - Team Project 2 - Stats Calculator Group
        * data is ordered
        * for an odd amount of values it is the middle value
        * For a data set with an even amount of values it is the average of the middle tow numbers
-       * usage get_median(data)
+       * usage: get_median(data)
        * sample result:
        
        ![median](/images/median.PNG) 
+    * get_mode
+        * get_mode calculates the mode of a data set
+        * the mode is the value that appears most often in a given data set
+        * usage: get_mode(data)
+        * sample result: 
         
+        ![mode](/images/mode.PNG)
+         
+        
+         
 	       
 	                
 	

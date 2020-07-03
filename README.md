@@ -48,7 +48,7 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * returns the mean value of a data set.
 	            * sample usage 
 	                * result = get_mean(data)
-	                * ![mean result] (/images/mean.PNG)
+	                * ! [mean result](/images/mean.PNG)
 	
             
 ### To Do List

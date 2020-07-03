@@ -54,7 +54,7 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * call sample static method
 	    * get_confidence_interval
 	        * calls confidence interval
-* Task breakdown
+# Task breakdown
 
     The starting point will be the orignal Calculator. This will be extended to create the Statistics class object.
     
@@ -101,7 +101,22 @@ IS 601850 - Team Project 2 - Stats Calculator Group
         * usage: get_confidence_interval(data)
         * sample results assumes a confidence score of .95
         
-        ![confidence interval](/images/confidence_interval.PNG)
+      ![confidence interval](/images/confidence_interval.PNG)
+      
+* Create random generator static utility methods
+    * RandomGenerators.py
+        * random_seed 
+            * create a random number based on parameters
+                * seed value - can generate a vlue with wor without a seed
+                * decimal - determines whether generated number should be an integer or a float.
+                * start - starting value range
+                * stop - ending value range
+                * step - the interval between numbers 
+            * usage: random_seed(seed = None, decimal = 1, start = 0, stop = 100, step = 1)
+                * generates a float value with no seed with a range of 0-99
+            * result:
+            
+            ![random_seed](/images/random_seed.PNG)
         
          
 	       

@@ -1,16 +1,16 @@
 from collections import Counter
 
 def mode(data):
+    mostOften = Counter(data)
+    get_mode = dict(mostOften)
+    modeResult = [x for x, y in get_mode.items() if y == max(list(mostOften.values()))]
+
     numValues = len(data)
+    numModes = len(modeResult)
 
-    numCount = Counter(data)
-    calc_mode = dict(numCount)
-    modeResult = [k for k, v in calc_mode.items() if v == max(list(numCount.values()))]
-
-    if len(modeResult) == numValues:
-        return
+    if numModes == numValues:
+        return "No mode found"
+    elif numModes != 1:
+        return "Multiple modes found"
     else:
-        return modeResult
-
-    # lst = [3, 4, 5, 5, 6, 6, 7, 7, 7, 5, 5]
-    # print(max(lst, key=lst.count))
+        return float(modeResult[0])

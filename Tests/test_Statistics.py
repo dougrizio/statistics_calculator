@@ -51,17 +51,6 @@ class MyTestCase(unittest.TestCase):
                 # dataset = list(test_mean_data)
                 # print(dataset[1])
 
-    def test_simple_sample(self):
-
-        print("-------------Simple Sample Test--------------")
-        test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
-
-        data = []
-
-        for row in test_sample_data:
-            data.append(row['Value'])
-        self.assertEqual(len(self.statistics.get_simple_sample(data)), 6 )
-
     def test_median(self):
         test_median_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
         test_median_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
@@ -73,6 +62,29 @@ class MyTestCase(unittest.TestCase):
             answer = float(row['Median'])
             self.assertEqual(self.statistics.get_median(data_slice), answer)
             self.assertEqual(self.statistics.result, float(row['Median']))
+
+    def test_mode(self):
+        test_mode_data = MyTestCase.CsvReader('/Tests/Data/ut_mode.csv')
+        test_mode_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
+        data = []
+        for row in test_mode_data:
+            data.append(float(row['Value']))
+        data_slice = data[0:11]
+        for row in test_mode_answer:
+            answer = float(row['Mode'])
+            self.assertEqual(self.statistics.get_mode(data_slice), answer)
+            self.assertEqual(self.statistics.result, float(row['Mode']))
+
+    def test_simple_sample(self):
+
+        print("-------------Simple Sample Test--------------")
+        test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+
+        data = []
+
+        for row in test_sample_data:
+            data.append(row['Value'])
+        self.assertEqual(len(self.statistics.get_simple_sample(data)), 6 )
 
 if __name__ == '__main__':
     unittest.main()

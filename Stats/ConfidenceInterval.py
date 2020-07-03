@@ -2,7 +2,8 @@
 from Calc.Calculator import Calculator
 from Stats.Mean import mean
 
-population = [1, 5, 9, 5, 3, 1, 8, 8]
+#for testing
+#sample = [1, 5, 9, 5, 3, 1, 8, 8]
 
 
 def confidence_interval(sample):
@@ -45,6 +46,7 @@ def confidence_interval(sample):
    upper_end = calc.add(interval,sample_mean)
 
    result = [lower_end, upper_end]
+
    return result
 
 
@@ -53,21 +55,21 @@ def confidence_interval(sample):
 
 
 
-''' For testing only
-   print(sample_size)
-   print(sample_mean)
-   print(subtract_mean_result)
-   print(squared_list)
-   print(total)
-   print(total2)
+'''For testing only
+   print("sample size: " + str(sample_size))
+   print("sample mean: " + str(sample_mean))
+   print("subtracted mean result: " + str(subtract_mean_result))
+   print("sqaured list: " + str(squared_list))
+   print("current total: " + str(total))
+   print("total 2: " + str(total2))
    print("sample deviation:" + str(sample_deviation))
-   print (conf)
-   print(interval)
+   print ("confidence level: " + str(conf))
+   print("z_score: " + str(interval))
    print("----------------Confidence interval----------------------")
-   print(lower_end)
-   print(upper_end)
-
+   print("interval lower end: " + str(lower_end))
+   print("interval upper end: " + str(upper_end))
 '''
+
 
 
 

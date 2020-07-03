@@ -89,9 +89,20 @@ IS 601850 - Team Project 2 - Stats Calculator Group
          * This in turn calls the n_items_no_seed from the RandomGenerators.py module
             THis can be called with or with out a seed value
        * usage: get_sample(data, number_of_choices)
-       * The returned value is a pseudo-random selection based on the number of choices provided
-           
+            * example uses a sample data set with 3 choices requested      
+       * The returned value is a pseudo-random selection based on the number of choices provided           
+       
        ![simple_sample](/images/simple_sample.PNG)
+       
+    * get_confidence_interval
+      * requets the confidence interval for a given data set
+        * This assumes the standard deviation is known or calcualted
+        * T_score or Z_score is known or calculated.
+        * usage: get_confidence_interval(data)
+        * sample results assumes a confidence score of .95
+        
+        ![confidence interval](/images/confidence_interval.PNG)
+        
          
 	       
 	                

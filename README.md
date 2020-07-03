@@ -55,7 +55,7 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 | MIKE | | | Random Number Generator |
 | MIKE | | | Random Gen Unit Test |
 | MIKE | | | Simple Random Sampling|
-| MIKE | |CI Sample | |
+| MIKE | | |Confidence Interval |
 | MIKE |Margin of Error | | |
 | MIKE |Cochran’s Sample Size Formula | | |
 | MIKE |Find a Sample Size Given a Confidence Interval and Width | | |

@@ -3,6 +3,7 @@ from Stats.Mean import mean
 from Stats.Median import median
 from Stats.Mode import mode
 from Stats.simple_sample import get_sample
+from Stats.ConfidenceInterval import confidence_interval
 
 class Statistics(Calculator):
 
@@ -27,3 +28,9 @@ class Statistics(Calculator):
         sample_size = 6
         self.result = get_sample(data, sample_size)
         return self.result
+
+    def get_confidence_interval (self, data):
+
+        self.result = confidence_interval(data)
+        return self.result
+

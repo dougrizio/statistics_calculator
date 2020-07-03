@@ -56,7 +56,7 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * calls confidence interval
 # Task breakdown
 
-    The starting point will be the orignal Calculator. This will be extended to create the Statistics class object.
+The starting point will be the orignal Calculator. This will be extended to create the Statistics class object.
     
 * Create statistics methods
     * get_mean

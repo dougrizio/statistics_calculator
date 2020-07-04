@@ -147,6 +147,14 @@ The starting point will be the orignal Calculator. This will be extended to crea
 	        * result:
 	        
 	        ![n_item_no_seed](/images/n_items_no_seed.PNG)
+	    * margin_of_error
+	        * returns the margin of error given a critical value and standard error
+	        * ME = critical value x standard error
+	        * usage get_margin_of_error(crit_value, standard_error)
+	        * result:
+	        ![margin_of_error](/images/me.PNG)
+	        
+	        
 	        
 	        
 	                

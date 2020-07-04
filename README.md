@@ -147,8 +147,10 @@ The starting point will be the orignal Calculator. This will be extended to crea
 	        * result:
 	        
 	        ![n_item_no_seed](/images/n_items_no_seed.PNG)
-	    * margin_of_error
+	    * get_margin_of_error
 	        * returns the margin of error given a critical value and standard error
+	        * calls wrapped function margin_of_error
+	        * margin_of_error calls muliply function from Calculator super class
 	        * ME = critical value x standard error
 	        * usage get_margin_of_error(crit_value, standard_error)
 	        * result:
@@ -176,7 +178,7 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | MIKE | | | Random Gen Unit Test |
 | MIKE | | | Simple Random Sampling|
 | MIKE | | |Confidence Interval |
-| MIKE ||Margin of Error | |
+| MIKE | |Margin of Error | |
 | MIKE |Cochran’s Sample Size Formula | | |
 | MIKE |Find a Sample Size Given a Confidence Interval and Width | | |
 

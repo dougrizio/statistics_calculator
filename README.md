@@ -152,6 +152,7 @@ The starting point will be the orignal Calculator. This will be extended to crea
 	        * ME = critical value x standard error
 	        * usage get_margin_of_error(crit_value, standard_error)
 	        * result:
+	        
 	        ![margin_of_error](/images/me.PNG)
 	        
 	        

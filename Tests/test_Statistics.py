@@ -98,5 +98,16 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.result[0], 2.471007117447738)
         self.assertEqual(self.result[1], 7.528992882552262)
 
+    def test_margin_of_error(self):
+        print("----ME test----")
+        crit_val = 1.645
+        standard_error = .013
+        self.result = self.statistics.get_margin_of_error(crit_val,standard_error)
+        print(self.result)
+        self.assertEqual(round(self.result, 6), .021385)
+
+
+
+
 if __name__ == '__main__':
     unittest.main()

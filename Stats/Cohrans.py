@@ -1,13 +1,7 @@
 import scipy.stats as st
 from math import ceil
 
-N1 = 100000
 
-cl1 = 0.95
-
-e1 = 0.05
-
-p1 = 0.5
 
 #https://towardsdatascience.com/how-to-sample-data-with-code-327359dce10b
 def sample(N, cl, e, p):
@@ -23,6 +17,3 @@ def sample(N, cl, e, p):
     return n
 
 
-result = sample(N1, cl1, e1, p1)
-
-print(result)

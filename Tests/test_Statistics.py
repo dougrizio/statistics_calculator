@@ -94,7 +94,7 @@ class MyTestCase(unittest.TestCase):
         # sample = list_generator(seed = 0, decimal = 0)
         self.result = self.statistics.get_confidence_interval(population)
         print("------CI Test------")
-        self.assertEqual(len(self.result), 2)
+        self.assertEqual(len(self.result), 3)
         self.assertEqual(self.result[0], 2.471007117447738)
         self.assertEqual(self.result[1], 7.528992882552262)
 

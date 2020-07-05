@@ -99,12 +99,16 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.result[1], 7.528992882552262)
 
     def test_margin_of_error(self):
+
+        test_me_data = MyTestCase.CsvReader('/Tests/Data/ut_multiplication.csv')
         print("----ME test----")
         crit_val = 1.645
         standard_error = .013
-        self.result = self.statistics.get_margin_of_error(crit_val,standard_error)
-        print(self.result)
-        self.assertEqual(round(self.result, 6), .021385)
+        for row in test_me_data:
+           self.result = self.statistics.get_margin_of_error(row['Value 1'], row['Value 2'])
+           self.assertEqual(self.result, float(row['Result']))
+           print(self.result)
+        #self.assertEqual(round(self.result, 6), .021385)
 
 
 

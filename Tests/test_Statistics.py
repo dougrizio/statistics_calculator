@@ -89,7 +89,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(len(self.statistics.get_simple_sample(data)), 6 )
 
     def test_confidence_interval(self):
-        #for testing
+        # for testing
         population = [1, 5, 9, 5, 3, 1, 8, 8]
         # sample = list_generator(seed = 0, decimal = 0)
         self.result = self.statistics.get_confidence_interval(population)
@@ -103,9 +103,22 @@ class MyTestCase(unittest.TestCase):
         test_me_data = MyTestCase.CsvReader('/Tests/Data/ut_multiplication.csv')
         print("----ME test----")
         for row in test_me_data:
-           self.result = self.statistics.get_margin_of_error(row['Value 1'], row['Value 2'])
-           self.assertEqual(self.result, float(row['Result']))
-           print(self.result)
+            self.result = self.statistics.get_margin_of_error(row['Value 1'], row['Value 2'])
+            self.assertEqual(self.result, float(row['Result']))
+            print(self.result)
+
+    # needs work calculations taken from library will
+    def test_cochran(self):
+        n1 = 100000
+        cl1 = 0.95
+        e1 = 0.05
+        p1 = 0.5
+
+        self.result = self.statistics.get_cochrans_sample(n1, cl1, e1, p1)
+
+        self.assertEqual(self.result, 383)
+
+
 
 
 

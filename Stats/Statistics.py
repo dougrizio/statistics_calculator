@@ -5,6 +5,7 @@ from Stats.Mode import mode
 from Stats.simple_sample import get_sample
 from Stats.ConfidenceInterval import confidence_interval
 from Stats.margin_of_error import margin_of_error
+from Stats.Cohrans import sample
 
 class Statistics(Calculator):
 
@@ -37,6 +38,10 @@ class Statistics(Calculator):
 
     def get_margin_of_error(self, crit_val, standard_error):
         self.result = margin_of_error(crit_val, standard_error)
+        return self.result
+
+    def get_cochrans_sample(self, n1, cl1, e1, p1):
+        self.result = sample(n1, cl1, e1, p1)
         return self.result
 
 

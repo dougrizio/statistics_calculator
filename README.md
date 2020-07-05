@@ -1,4 +1,4 @@
-! [Travis CI badge](https://travis-ci.com/dougrizio/statistics_calculator.svg?branch=master)
+![Travis CI badge](https://travis-ci.com/dougrizio/statistics_calculator.svg?branch=master)
 # Statistics Calculator
 IS 601850 - Team Project 2 - Stats Calculator Group
 

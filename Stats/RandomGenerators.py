@@ -1,5 +1,6 @@
 import random
 
+# used for custom error checking
 class EmptyListError(Exception):
     """Raised when the input value is too large"""
     pass

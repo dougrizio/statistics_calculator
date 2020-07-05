@@ -48,8 +48,7 @@ class Statistics(Calculator):
 
 
 
-crit_val = 1.645
-standard_error = .013
+
 
 
 

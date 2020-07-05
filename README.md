@@ -157,6 +157,13 @@ The starting point will be the orignal Calculator. This will be extended to crea
 	        * result:
 	        
 	        ![margin_of_error](/images/me.PNG)
+	    * get_cochrans_sample
+	        * returns sample values based on Cochran's sampling formula
+	        * Uses population size, confidence level, margin of error, and target proportion
+	        * usage get_cochrans_sample(self, poplulation_sample, confidence_level, margin of error, target_proportion)
+	        * result:
+	        
+	        ![Cochran's](/images/cochrans.PNG) 
 	        
 	        
 	        
@@ -181,6 +188,6 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | MIKE | | |Confidence Interval |
 | MIKE | | |Margin of Error |
 | MIKE | |Cochran’s Sample Size Formula | |
-| MIKE |Find a Sample Size Given a Confidence Interval and Width | | |
+| MIKE | | Find a Sample Size Given a Confidence Interval and Width | |
 
 

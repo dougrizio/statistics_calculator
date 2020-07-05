@@ -17,3 +17,6 @@ def sample(N, cl, e, p):
     return n
 
 
+c_form = sample(10000, 0.95, .05, .05)
+
+print("Sample size needed: " + str(c_form))

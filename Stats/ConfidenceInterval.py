@@ -47,32 +47,25 @@ def confidence_interval(sample):
    width = calc.subtract(lower_end, upper_end)
 
    result = [lower_end, upper_end, width]
-   print("sample size: " + str(sample_size))
-   print("sample mean: " + str(sample_mean))
-   print("subtracted mean result: " + str(subtract_mean_result))
-   print("sqaured list: " + str(squared_list))
-   print("current total: " + str(total))
-   print("total 2: " + str(total2))
-   print("sample deviation:" + str(sample_deviation))
-   print("confidence level: " + str(conf))
+
+
+   return result
+
+'''
+ print("sample size: " + str(sample_size))
+ print("sample mean: " + str(sample_mean))
+ print("subtracted mean result: " + str(subtract_mean_result))
+ print("sqaured list: " + str(squared_list))
+ print("current total: " + str(total))
+ print("total 2: " + str(total2))
+ print("sample deviation:" + str(sample_deviation))
+ print("confidence level: " + str(conf))
    print("z_score: " + str(interval))
    print("----------------Confidence interval----------------------")
    print("interval lower end: " + str(lower_end))
    print("interval upper end: " + str(upper_end))
    print("width: " + str(round(width, 2)))
-   return result
-
-
-
-
-
-
-
-#For testing only
-
-
-confidence_interval(sample)
-
+'''
 
 
 

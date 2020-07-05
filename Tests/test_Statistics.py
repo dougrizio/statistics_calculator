@@ -107,7 +107,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.result, float(row['Result']))
             print(self.result)
 
-    # needs work calculations taken from library will
+    # needs work calculations taken from library
     def test_cochran(self):
         n1 = 100000
         cl1 = 0.95

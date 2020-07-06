@@ -85,7 +85,6 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * usage: get_mode(data)
         * sample result: 
         
-        variance
     * get_variance
         * get_variance calculates the average of the squared differences from the mean of a set
         * calculate the mean of the set

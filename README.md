@@ -55,6 +55,8 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * calls variance static method
 	    *get_standard_deviation
 	        * calls standard_deviation static method
+	    *get_zscore
+	        * calls zscore static method
 	    * get_simple sample
 	        * call sample static method
 	    * get_confidence_interval
@@ -104,6 +106,16 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * calculate the variance of the set
         * calculate the square root of the variance
         * sample result:
+        
+        ![placeholder](/images/median.PNG) 
+    * get_zscore
+        * get_zscore calculates the number of standard deviations by which the value of the raw score is above or below the mean value of what is being measured
+        * declare the raw score of the set
+        * calculate the mean of the set
+        * calculate the standard deviation of the set
+        * subtract the mean from the raw score
+        * divide the standard deviation from the quotient
+        * sample result
         
         ![mode](/images/mode.PNG)
     * get_simple sample
@@ -207,7 +219,8 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | DOUG | | | Variance Unit Test |
 | DOUG | | | Standard Deviation Method |
 | DOUG | | | Standard Deviation Unit Test |
-| DOUG | | Develop methods/tests for Z-Score | |
+| DOUG | | | Z-Score Method |
+| DOUG | | | Z-Score Unit Test |
 | MIKE | | | Random Number Generator |
 | MIKE | | | Random Gen Unit Test |
 | MIKE | | | Simple Random Sampling|

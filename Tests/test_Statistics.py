@@ -14,6 +14,7 @@ from Stats.RandomGenerators import list_generator
 from Calc.Calculator import Calculator
 
 from Stats.Mean import mean
+from Stats.Standard_Deviation import standard_deviation
 
 class MyTestCase(unittest.TestCase):
 
@@ -103,6 +104,18 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.get_standard_deviation(data_slice), answer)
             self.assertEqual(self.statistics.result, float(row['Standard_Deviation']))
 
+    def test_zscore(self):
+        test_zscore_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_zscore_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
+        data = []
+        for row in test_zscore_data:
+            data.append(float(row['Value']))
+        data_slice = data[0:100]
+        for row in test_zscore_answer:
+            answer = float(row['ZScore'])
+            self.assertEqual(self.statistics.get_zscore(data_slice), answer)
+            self.assertEqual(self.statistics.result, float(row['ZScore']))
+
     def test_simple_sample(self):
 
         print("-------------Simple Sample Test--------------")
@@ -143,6 +156,10 @@ class MyTestCase(unittest.TestCase):
         self.result = self.statistics.get_cochrans_sample(n1, cl1, e1, p1)
 
         self.assertEqual(self.result, 383)
+
+        data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        print(self.statistics.get_zscore(data))
+
 
 if __name__ == '__main__':
     unittest.main()

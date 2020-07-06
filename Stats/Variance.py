@@ -15,5 +15,4 @@ def variance(data):
         eachSquare = squaring(eachDiff)
         listSquares.append(eachSquare)
 
-    totalVariance = mean(listSquares)
-    return totalVariance
+    return mean(listSquares)

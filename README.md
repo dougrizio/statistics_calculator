@@ -51,6 +51,8 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * calls median static method
 	    * get_mode
 	        * calls mode static method
+	    *get_variance
+	        * calls variance static method
 	    * get_simple sample
 	        * call sample static method
 	    * get_confidence_interval
@@ -82,6 +84,17 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * the mode is the value that appears most often in a given data set
         * usage: get_mode(data)
         * sample result: 
+        
+        variance
+    * get_variance
+        * get_variance calculates the average of the squared differences from the mean of a set
+        * calculate the mean of the set
+        * calculate the difference between the mean and each number in the set
+        * create a list of differences
+        * square each difference
+        * create a list of squares
+        * calculate the mean of those squares
+        * sample result:
         
         ![mode](/images/mode.PNG)
     * get_simple sample
@@ -175,13 +188,16 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | | To Do | In Progress | Review | Done |
 |---|---|---|---|---|
 | DOUG | | | | Upload original calculator files |
-| DOUG | Develop methods/tests for Median | | |
-| DOUG | Develop methods/tests for Mode | | |
-| DOUG | Develop methods/tests for Variance | | |
-| DOUG | Develop methods/tests for Standard Deviation | | |
-| DOUG | Develop methods/tests for Z-Score | | |
 | DOUG | | | Mean Method |
-| DOUG | | | Mean Unit Test
+| DOUG | | | Mean Unit Test |
+| DOUG | | | Median Method |
+| DOUG | | | Median Unit Test |
+| DOUG | | | Mode Method |
+| DOUG | | | Mode Unit Test |
+| DOUG | | | Variance Method |
+| DOUG | | | Variance Unit Test |
+| DOUG | | Develop methods/tests for Standard Deviation | |
+| DOUG | Develop methods/tests for Z-Score | | |
 | MIKE | | | Random Number Generator |
 | MIKE | | | Random Gen Unit Test |
 | MIKE | | | Simple Random Sampling|

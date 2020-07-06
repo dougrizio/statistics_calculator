@@ -6,4 +6,3 @@ def get_sample(data, sample_size):
     sample = n_items_no_seed(data, sample_size )
     #print(sample)
     return sample
-

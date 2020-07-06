@@ -13,6 +13,8 @@ from Calc.Squarerooting import squarerooting
 from Stats.RandomGenerators import list_generator
 from Calc.Calculator import Calculator
 
+from Stats.Mean import mean
+
 class MyTestCase(unittest.TestCase):
 
     @staticmethod
@@ -118,11 +120,17 @@ class MyTestCase(unittest.TestCase):
 
         self.assertEqual(self.result, 383)
 
-
-
-
-
-
+    def test_variance(self):
+        test_variance_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_variance_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
+        data = []
+        for row in test_variance_data:
+            data.append(float(row['Value']))
+        data_slice = data[0:100]
+        for row in test_variance_answer:
+            answer = float(row['Variance'])
+            self.assertEqual(self.statistics.get_variance(data_slice), answer)
+            self.assertEqual(self.statistics.result, float(row['Variance']))
 
 if __name__ == '__main__':
     unittest.main()

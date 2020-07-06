@@ -53,6 +53,8 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * calls mode static method
 	    *get_variance
 	        * calls variance static method
+	    *get_standard_deviation
+	        * calls standard_deviation static method
 	    * get_simple sample
 	        * call sample static method
 	    * get_confidence_interval
@@ -78,13 +80,14 @@ The starting point will be the orignal Calculator. This will be extended to crea
        * usage: get_median(data)
        * sample result:
        
-       ![median](/images/median.PNG) 
+        ![median](/images/median.PNG) 
     * get_mode
         * get_mode calculates the mode of a data set
         * the mode is the value that appears most often in a given data set
         * usage: get_mode(data)
         * sample result: 
         
+        ![placeholder](/images/median.PNG) 
     * get_variance
         * get_variance calculates the average of the squared differences from the mean of a set
         * calculate the mean of the set
@@ -93,6 +96,13 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * square each difference
         * create a list of squares
         * calculate the mean of those squares
+        * sample result:
+        
+        ![placeholder](/images/median.PNG) 
+    * get_standard_deviation
+        * get_variance calculates the amount of variation in a set of values relative to the mean
+        * calculate the variance of the set
+        * calculate the square root of the variance
         * sample result:
         
         ![mode](/images/mode.PNG)
@@ -195,8 +205,9 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | DOUG | | | Mode Unit Test |
 | DOUG | | | Variance Method |
 | DOUG | | | Variance Unit Test |
-| DOUG | | Develop methods/tests for Standard Deviation | |
-| DOUG | Develop methods/tests for Z-Score | | |
+| DOUG | | | Standard Deviation Method |
+| DOUG | | | Standard Deviation Unit Test |
+| DOUG | | Develop methods/tests for Z-Score | |
 | MIKE | | | Random Number Generator |
 | MIKE | | | Random Gen Unit Test |
 | MIKE | | | Simple Random Sampling|

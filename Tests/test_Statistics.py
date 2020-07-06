@@ -79,6 +79,30 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.get_mode(data_slice), answer)
             self.assertEqual(self.statistics.result, float(row['Mode']))
 
+    def test_variance(self):
+        test_variance_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_variance_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
+        data = []
+        for row in test_variance_data:
+            data.append(float(row['Value']))
+        data_slice = data[0:100]
+        for row in test_variance_answer:
+            answer = float(row['Variance'])
+            self.assertEqual(self.statistics.get_variance(data_slice), answer)
+            self.assertEqual(self.statistics.result, float(row['Variance']))
+
+    def test_standard_deviation(self):
+        test_standard_deviation_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_standard_deviation_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
+        data = []
+        for row in test_standard_deviation_data:
+            data.append(float(row['Value']))
+        data_slice = data[0:100]
+        for row in test_standard_deviation_answer:
+            answer = float(row['Standard_Deviation'])
+            self.assertEqual(self.statistics.get_standard_deviation(data_slice), answer)
+            self.assertEqual(self.statistics.result, float(row['Standard_Deviation']))
+
     def test_simple_sample(self):
 
         print("-------------Simple Sample Test--------------")
@@ -119,18 +143,6 @@ class MyTestCase(unittest.TestCase):
         self.result = self.statistics.get_cochrans_sample(n1, cl1, e1, p1)
 
         self.assertEqual(self.result, 383)
-
-    def test_variance(self):
-        test_variance_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
-        test_variance_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
-        data = []
-        for row in test_variance_data:
-            data.append(float(row['Value']))
-        data_slice = data[0:100]
-        for row in test_variance_answer:
-            answer = float(row['Variance'])
-            self.assertEqual(self.statistics.get_variance(data_slice), answer)
-            self.assertEqual(self.statistics.result, float(row['Variance']))
 
 if __name__ == '__main__':
     unittest.main()

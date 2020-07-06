@@ -3,6 +3,7 @@ from Stats.Mean import mean
 from Stats.Median import median
 from Stats.Mode import mode
 from Stats.Variance import variance
+from Stats.Standard_Deviation import standard_deviation
 from Stats.simple_sample import get_sample
 from Stats.ConfidenceInterval import confidence_interval
 from Stats.margin_of_error import margin_of_error
@@ -29,6 +30,10 @@ class Statistics(Calculator):
 
     def get_variance(self, data):
         self.result = variance(data)
+        return self.result
+
+    def get_standard_deviation(self, data):
+        self.result = standard_deviation(data)
         return self.result
 
     def get_simple_sample(self, data):

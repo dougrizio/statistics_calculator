@@ -38,7 +38,7 @@ def list_generator(seed = None, decimal = 1, start = 0, stop = 100):
         else:
             random_num = random.randrange(start,stop, 1)
         random_list.append(random_num)
-      check_for_list(random_list)
+      #check_for_list(random_list)
      #For testing
      # print(len(random_list))
 

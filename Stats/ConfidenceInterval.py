@@ -3,7 +3,7 @@ from Calc.Calculator import Calculator
 from Stats.Mean import mean
 
 #for testing
-sample = [1, 5, 9, 5, 3, 1, 8, 8]
+#sample = [1, 5, 9, 5, 3, 1, 8, 8]
 
 
 def confidence_interval(sample):

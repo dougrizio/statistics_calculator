@@ -7,7 +7,14 @@ def zscore(data):
     dataMean = mean(data)
     stanDev = standard_deviation(data)
 
-    for eachNum in data:
-        meanMinusRaw = subtraction(dataMean, eachNum)
-        scorez = division(stanDev, meanMinusRaw)
-        return scorez
+    listMinuses = []
+    for eachRaw in data:
+        meanMinusRaw = subtraction(dataMean, eachRaw)
+        listMinuses.append(meanMinusRaw)
+
+    listZScores = []
+    for eachMinus in listMinuses:
+        eachZ = division(stanDev, eachMinus)
+        listZScores.append(eachZ)
+
+    return list(listZScores)

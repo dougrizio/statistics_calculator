@@ -104,14 +104,15 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.get_standard_deviation(data_slice), answer)
             self.assertEqual(self.statistics.result, float(row['Standard_Deviation']))
 
+    #NOT WORKING YET
     def test_zscore(self):
         test_zscore_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
-        data = []
-        for row in test_zscore_data:
-            data.append(float(row['Value']))
-        data_slice = data[0:100]
-        print("ZScore")
-        print(self.statistics.get_zscore(data_slice))
+        test_zscore_answer = MyTestCase.CsvReader('/Tests/Data/ut_zscores.csv')
+        data = [1, 2, 3, 4, 5, 6, 7, 8]
+        for eachNum in self.statistics.get_zscore(data):
+            for row in test_zscore_answer:
+                answer = float(row['ZScores'])
+                self.assertEqual(eachNum, answer)
 
     def test_simple_sample(self):
 

@@ -9,6 +9,7 @@ from Stats.simple_sample import get_sample
 from Stats.ConfidenceInterval import confidence_interval
 from Stats.margin_of_error import margin_of_error
 from Stats.Cohrans import sample
+from Stats.sample_CI_width import sample_CI_width
 
 class Statistics(Calculator):
 
@@ -58,6 +59,11 @@ class Statistics(Calculator):
     def get_cochrans_sample(self, n1, cl1, e1, p1):
         self.result = sample(n1, cl1, e1, p1)
         return self.result
+
+    def get_sample_ci_width(self, confidence, width):
+        self.result = sample_CI_width(confidence, width)
+        return self.result
+
 
 
 

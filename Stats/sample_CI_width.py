@@ -10,11 +10,11 @@ width = ci[2]
 confidence = .95
 base_percent = .5
 
-def get_sample_CI_width(confidence_lvl, widtha):
+def sample_CI_width(confidence_lvl, widtha):
 
     w = widtha
 
-    za = confidence / 2
+    za = confidence_lvl / 2
     me = w / 2
     percent = 1- base_percent
 
@@ -26,5 +26,5 @@ def get_sample_CI_width(confidence_lvl, widtha):
     return multiplied
 
 
-s = get_sample_CI_width(confidence,width)
+s = sample_CI_width(confidence,width)
 print(s)

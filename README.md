@@ -224,9 +224,9 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | MIKE | | | Random Number Generator |
 | MIKE | | | Random Gen Unit Test |
 | MIKE | | | Simple Random Sampling|
-| MIKE | | |Confidence Interval |
-| MIKE | | |Margin of Error |
-| MIKE | |Cochran’s Sample Size Formula | |
-| MIKE | | Find a Sample Size Given a Confidence Interval and Width | |
+| MIKE | | | Confidence Interval |
+| MIKE | | | Margin of Error |
+| MIKE | | | Cochran’s Sample Size Formula |
+| MIKE | |  | Find a Sample Size Given a Confidence Interval and Width |
 
 

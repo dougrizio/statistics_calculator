@@ -168,6 +168,12 @@ class MyTestCase(unittest.TestCase):
         test_list = Stats.RandomGenerators.list_generator()
         self.assertEqual(len(test_list), 100)
 
+    def test_random_seed(self):
+        seed_val = 6
+        choice = Stats.RandomGenerators.random_seed(seed=seed_val)
+        self.result = seed_val
+        self.assertEqual(self.result, 6)
+
 
 if __name__ == '__main__':
     unittest.main()

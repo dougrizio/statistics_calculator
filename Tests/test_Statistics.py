@@ -16,6 +16,9 @@ from Calc.Calculator import Calculator
 from Stats.Mean import mean
 from Stats.Standard_Deviation import standard_deviation
 import Stats.RandomGenerators
+from Stats.ConfidenceInterval import confidence_interval
+
+
 class MyTestCase(unittest.TestCase):
 
     @staticmethod
@@ -159,6 +162,17 @@ class MyTestCase(unittest.TestCase):
 
         data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         print(self.statistics.get_zscore(data))
+
+    def test_sample_ci_width(self):
+        sample = list_generator(stop=10000)
+        ci = confidence_interval(sample)
+        confidence_val = ci[0]
+        width = ci[2]
+        confidence = .95
+        base_percent = .5
+
+        self.result = self.statistics.get_sample_ci_width(confidence, width)
+        self.assertEqual(len(sample), 10000)
 
     def test_confidence_interval(self):
         # for testing

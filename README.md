@@ -73,6 +73,7 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * sample result:
         
         ![mean](/images/mean.PNG)  
+        
     * get_median 
        * get_median method takes a sample data set and returns the median
        * formula: 
@@ -83,13 +84,15 @@ The starting point will be the orignal Calculator. This will be extended to crea
        * sample result:
        
         ![median](/images/median.PNG) 
+        
     * get_mode
         * get_mode calculates the mode of a data set
         * the mode is the value that appears most often in a given data set
         * usage: get_mode(data)
         * sample result: 
         
-        ![placeholder](/images/median.PNG) 
+        ![mode](/images/mode.PNG) 
+        
     * get_variance
         * get_variance calculates the average of the squared differences from the mean of a set
         * calculate the mean of the set
@@ -100,14 +103,16 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * calculate the mean of those squares
         * sample result:
         
-        ![placeholder](/images/median.PNG) 
+        ![variance](/images/variance.PNG) 
+        
     * get_standard_deviation
         * get_variance calculates the amount of variation in a set of values relative to the mean
         * calculate the variance of the set
         * calculate the square root of the variance
         * sample result:
         
-        ![placeholder](/images/median.PNG) 
+        ![standard_deviation](/images/stan_dev.PNG) 
+        
     * get_zscore
         * get_zscore calculates the number of standard deviations by which the value of the raw score is above or below the mean value of what is being measured
         * declare the raw score of the set
@@ -115,9 +120,10 @@ The starting point will be the orignal Calculator. This will be extended to crea
         * calculate the standard deviation of the set
         * subtract the mean from the raw score
         * divide the standard deviation from the quotient
-        * sample result
+        * sample result:
         
-        ![mode](/images/mode.PNG)
+        ![zscore](/images/zscores.PNG)
+        
     * get_simple sample
        * get_simple_sample takes a data set and the amount of choices needed as input
        * it calls the simple_sample utility static method
@@ -209,24 +215,18 @@ The starting point will be the orignal Calculator. This will be extended to crea
 | | To Do | In Progress | Review | Done |
 |---|---|---|---|---|
 | DOUG | | | | Upload original calculator files |
-| DOUG | | | Mean Method |
-| DOUG | | | Mean Unit Test |
-| DOUG | | | Median Method |
-| DOUG | | | Median Unit Test |
-| DOUG | | | Mode Method |
-| DOUG | | | Mode Unit Test |
-| DOUG | | | Variance Method |
-| DOUG | | | Variance Unit Test |
-| DOUG | | | Standard Deviation Method |
-| DOUG | | | Standard Deviation Unit Test |
-| DOUG | | | Z-Score Method |
-| DOUG | | | Z-Score Unit Test |
-| MIKE | | | Random Number Generator |
-| MIKE | | | Random Gen Unit Test |
-| MIKE | | | Simple Random Sampling|
-| MIKE | | | Confidence Interval |
-| MIKE | | | Margin of Error |
-| MIKE | | | Cochran’s Sample Size Formula |
-| MIKE | |  | Find a Sample Size Given a Confidence Interval and Width |
+| DOUG | | | | Mean |
+| DOUG | | | | Median |
+| DOUG | | | | Mode |
+| DOUG | | | | Variance |
+| DOUG | | | | Standard Deviation |
+| DOUG | | | | Z-Score |
+| MIKE | | | | Random Number Generator |
+| MIKE | | | | Random Gen Unit Test |
+| MIKE | | | | Simple Random Sampling|
+| MIKE | | | | Confidence Interval |
+| MIKE | | | | Margin of Error |
+| MIKE | | | | Cochran’s Sample Size Formula |
+| MIKE | |  | | Find a Sample Size Given a Confidence Interval and Width |
 
 

@@ -27,4 +27,5 @@ def sample_CI_width(confidence_lvl, widtha):
 
 
 s = sample_CI_width(confidence,width)
-print(s)
+
+print("Sample Size: " + str(s))

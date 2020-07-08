@@ -58,12 +58,6 @@ class Statistics(Calculator):
         return self.result
 
     def get_cochrans_sample(self, n1, cl1, e1, p1):
-        try:
-            check_for_number_parameters(n1, cl1, e1)
-        except:
-            print("Values are bad!")
-        else:
-            print("Values are good!")
 
         self.result = sample(n1, cl1, e1, p1)
         return self.result

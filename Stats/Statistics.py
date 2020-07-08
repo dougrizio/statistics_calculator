@@ -10,7 +10,7 @@ from Stats.ConfidenceInterval import confidence_interval
 from Stats.margin_of_error import margin_of_error
 from Stats.Cohrans import sample
 from Stats.sample_CI_width import sample_CI_width
-
+from Stats.int_float_checker import check_for_number_parameters
 
 class Statistics(Calculator):
 
@@ -58,10 +58,24 @@ class Statistics(Calculator):
         return self.result
 
     def get_cochrans_sample(self, n1, cl1, e1, p1):
+        try:
+            check_for_number_parameters(n1, cl1, e1)
+        except:
+            print("Values are bad!")
+        else:
+            print("Values are good!")
+
         self.result = sample(n1, cl1, e1, p1)
         return self.result
 
     def get_sample_ci_width(self, confidence, width):
+        try:
+            check_for_number_parameters(confidence, width)
+        except:
+            print("Values are bad!")
+        else:
+            print("Values are good!")
+
         self.result = sample_CI_width(confidence, width)
         return self.result
 

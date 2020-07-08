@@ -1,72 +1,73 @@
+from Calc.Addition import addition
+from Calc.Subtraction import subtraction
+from Calc.Multiplication import multiplication
+from Calc.Division import division
+from Calc.Squaring import squaring
+from Calc.Squarerooting import squarerooting
 
-from Calc.Calculator import Calculator
 from Stats.Mean import mean
 
-population = [1, 5, 9, 5, 3, 1, 8, 8]
+#for testing
+sample = [1, 5, 9, 5, 3, 1, 8, 8]
 
 
 def confidence_interval(sample):
-   calc = Calculator()
-   result = []
+   # finding sample standard deviation
 
-
-   sample_size = len(sample) - 1
+   old_sample_size = len(sample)
+   new_sample_size = subtraction(1, old_sample_size)
    sample_mean = mean(sample)
+
    subtract_mean_result = []
+   for item in sample:
+      result = subtraction(sample_mean, item)
+      subtract_mean_result.append(result)
+
    squared_list = []
-   total = 0
-   #taken from t_distribution chart https://www.statisticshowto.com/probability-and-statistics/confidence-interval/#CISample
-   t_distribution = 2.262
+   for num in subtract_mean_result:
+      squared_result = squaring(num)
+      squared_list.append(squared_result)
+
+   squared_list_total = 0
+   for num in squared_list:
+      squared_list_total += num
+
+   sample_variance = division(new_sample_size, squared_list_total)
+   sample_deviation = squarerooting(sample_variance)
+
+   # finding confidence interval
 
    confidence_level = .95
+   t_distribution = 2.262
+   # taken from t_distribution chart https://www.statisticshowto.com/probability-and-statistics/confidence-interval/#CISample
 
-   for item in sample:
-       result = item - sample_mean
-       subtract_mean_result.append(result)
+   confidence_minus_one = subtraction(confidence_level, 1)
+   new_confidence = division(2, confidence_minus_one)
 
-   for num in subtract_mean_result:
-       squared_result = Calculator.square(calc, num)
-       squared_list.append(squared_result)
+   squareroot_of_sample = squarerooting(old_sample_size)
+   CI = division(squareroot_of_sample, sample_deviation)
+   interval = multiplication(CI, t_distribution)
 
-   for num in squared_list:
-       total += num
+   lower_end = subtraction(interval, sample_mean)
+   upper_end = addition(interval, sample_mean)
+   width = subtraction(lower_end, upper_end)
 
-   total2 = total / sample_size
+   return [lower_end, upper_end, width]
 
-   sample_deviation = Calculator.squareroot(calc, total2)
-
-   conf = (1 - confidence_level) / 2
-
-   ci = sample_deviation / Calculator.squareroot(calc,sample_size + 1)
-
-   interval = calc.multiply(ci, t_distribution)
-
-   lower_end = calc.subtract(interval, sample_mean)
-   upper_end = calc.add(interval,sample_mean)
-
-   result = [lower_end, upper_end]
-   return result
-
-
-
-
-
-
-
-''' For testing only
-   print(sample_size)
-   print(sample_mean)
-   print(subtract_mean_result)
-   print(squared_list)
-   print(total)
-   print(total2)
-   print("sample deviation:" + str(sample_deviation))
-   print (conf)
-   print(interval)
+'''
+ print("sample size: " + str(sample_size))
+ print("sample mean: " + str(sample_mean))
+ print("subtracted mean result: " + str(subtract_mean_result))
+ print("sqaured list: " + str(squared_list))
+ print("current total: " + str(total))
+ print("total 2: " + str(total2))
+ print("sample deviation:" + str(sample_deviation))
+ print("confidence level: " + str(conf))
+   print("z_score: " + str(interval))
    print("----------------Confidence interval----------------------")
-   print(lower_end)
-   print(upper_end)
-
+   print("interval lower end: " + str(lower_end))
+   print("interval upper end: " + str(upper_end))
+   print("width: " + str(round(width, 2)))
 '''
 
 

@@ -15,7 +15,7 @@ from Calc.Calculator import Calculator
 
 from Stats.Mean import mean
 from Stats.Standard_Deviation import standard_deviation
-
+import Stats.RandomGenerators
 class MyTestCase(unittest.TestCase):
 
     @staticmethod
@@ -157,6 +157,16 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(len(self.result), 3)
         self.assertEqual(self.result[0], 2.471007117447738)
         self.assertEqual(self.result[1], 7.528992882552262)
+
+    def test_something(self):
+        # List evaluates to False if empty
+        test_list = Stats.RandomGenerators.list_generator(2)
+        self.assertTrue(test_list)
+
+    def test_random_item(self):
+        # test default list count
+        test_list = Stats.RandomGenerators.list_generator(2)
+        self.assertEqual(len(test_list), 100)
 
 
 if __name__ == '__main__':

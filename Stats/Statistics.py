@@ -66,12 +66,9 @@ class Statistics(Calculator):
         return self.result
 
     def get_sample_ci_width(self, confidence, width):
-        try:
-            check_for_number_parameters(confidence, width)
-        except:
-            print("Values are bad!")
-        else:
-            print("Values are good!")
+
+        check_for_number_parameters(confidence, width)
+
 
         self.result = sample_CI_width(confidence, width)
         return self.result

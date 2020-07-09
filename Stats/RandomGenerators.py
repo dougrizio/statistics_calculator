@@ -39,8 +39,7 @@ def list_generator(seed = None, decimal = 1, start = 0, stop = 100):
             random_num = random.randrange(start,stop, 1)
         random_list.append(random_num)
       check_for_list(random_list)
-     #For testing
-     # print(len(random_list))
+
 
       return random_list
 
@@ -57,7 +56,7 @@ def random_item(test_list):
 def random_seed_choice():
       # used above function for testing
       test_list = list_generator(12)
-      print("Sample list: " + str(test_list))
+
       random.seed(6)
       choice = random.choice(test_list)
       return choice
@@ -80,7 +79,7 @@ def n_items_no_seed(test_list, sample_size, seed = None):
 def check_for_list(list_to_check):
     try:
         if len(list_to_check) > 0 :
-            print("list checked")
+
             return list
     except:
         if not list_to_check:
@@ -99,8 +98,7 @@ def check_for_list(list_to_check):
 
 
 
-# change to what func you want to test
-data = list_generator(decimal = 0, stop = 15)
+
 
 
 

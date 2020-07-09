@@ -98,7 +98,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_simple_sample(self):
 
-        print("-------------Simple Sample Test--------------")
         test_sample_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
 
         data = []
@@ -110,11 +109,11 @@ class MyTestCase(unittest.TestCase):
     def test_margin_of_error(self):
 
         test_me_data = MyTestCase.CsvReader('/Tests/Data/ut_multiplication.csv')
-        print("----ME test----")
+
         for row in test_me_data:
             self.result = self.statistics.get_margin_of_error(row['Value 1'], row['Value 2'])
             self.assertEqual(self.result, float(row['Result']))
-            print(self.result)
+
 
     # needs work calculations taken from library
     def test_cochran(self):
@@ -128,7 +127,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.result, 383)
 
         data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        print(self.statistics.get_zscore(data))
+
 
     def test_sample_ci_width(self):
         sample = list_generator(stop=10000)
@@ -146,7 +145,7 @@ class MyTestCase(unittest.TestCase):
         population = [1, 5, 9, 5, 3, 1, 8, 8]
         # sample = list_generator(seed = 0, decimal = 0)
         self.result = self.statistics.get_confidence_interval(population)
-        print("------CI Test------")
+
         self.assertEqual(len(self.result), 3)
         self.assertEqual(self.result[0], 2.471007117447738)
         self.assertEqual(self.result[1], 7.528992882552262)

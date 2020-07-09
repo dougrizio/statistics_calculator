@@ -204,12 +204,17 @@ The starting point will be the orignal Calculator. This will be extended to crea
 	        * result:
 	        
 	        ![Cochran's](/images/cochrans.PNG) 
+	    * get_sample_ci_width
+	        * returns a sample size when given the confidence level and width
+	        * uses confidence interval function 
+	        * usage sample_CI_width(confidence_lvl, width)
+	        * result: 
+	        
+	        ![sample ci w/ width](/images/sample_CI_width.PNG)
 	        
 	        
 	        
-	        
-	                
-	
+ 	
  
 ### To Do List
 | | To Do | In Progress | Review | Done |

@@ -26,5 +26,3 @@ def sample_CI_width(confidence_lvl, widtha):
     return multiplied
 
 
-s = sample_CI_width(confidence,width)
-print(s)

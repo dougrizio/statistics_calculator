@@ -80,7 +80,7 @@ def n_items_no_seed(test_list, sample_size, seed = None):
 def check_for_list(list_to_check):
     try:
         if len(list_to_check) > 0 :
-            print("list checked: " + str(list_to_check))
+            print("list checked")
             return list
     except:
         if not list_to_check:

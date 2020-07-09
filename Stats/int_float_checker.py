@@ -1,7 +1,19 @@
 #in progress
-def check_for_number_parameters (a = "c", b = None, c = None, d = None):
-    answer = 0
+def check_for_number_parameters (a = 0, b = 0, c = 0):
 
-    if (int(a) or float(a)) and (int(b) or float(b)):
-        pass
+    result = a
+    bresult = b
+
+#    if (int(a) or float(a)) and (int(b) or float(b)):
+ #       pass
+    try:
+        if (int(a) or float(a)) + (int(b) or float(b)) + (int(c) or float(c)) :
+            pass
+
+
+    except:
+        print("Values must be integers or floats!")
+
+
+    return result, bresult
 

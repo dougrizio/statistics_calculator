@@ -26,11 +26,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.result, 0)
 
     def test_mean(self):
-        test_mean_data = MyTestCase.CsvReader('/Tests/Data/ut_zvalues.csv')
+        test_mean_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_mean_answer = MyTestCase.CsvReader('/Tests/Data/ut_answers.csv')
         data = []
         for row in test_mean_data:
-            data.append(float(row['Values']))
-        for row in test_mean_data:
+            data.append(float(row['Value']))
+        for row in test_mean_answer:
             answer = float(row['Mean'])
             self.assertEqual(self.statistics.get_mean(data), answer)
             self.assertEqual(self.statistics.result, float(row['Mean']))

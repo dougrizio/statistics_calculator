@@ -208,9 +208,7 @@ The starting point will be the orignal Calculator. This will be extended to crea
 	        
 	        
 	        
-	        
-	                
-	
+ 	
  
 ### To Do List
 | | To Do | In Progress | Review | Done |

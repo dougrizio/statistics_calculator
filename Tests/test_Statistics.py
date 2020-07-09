@@ -1,23 +1,9 @@
 import csv
 import unittest
 from Stats.Statistics import Statistics
-from collections import Counter
-
-from Calc.Addition import addition
-from Calc.Subtraction import subtraction
-from Calc.Multiplication import multiplication
-from Calc.Division import division
-from Calc.Squaring import squaring
-from Calc.Squarerooting import squarerooting
-
 from Stats.RandomGenerators import list_generator
-from Calc.Calculator import Calculator
-
-from Stats.Mean import mean
-from Stats.Standard_Deviation import standard_deviation
 import Stats.RandomGenerators
 from Stats.ConfidenceInterval import confidence_interval
-
 
 class MyTestCase(unittest.TestCase):
 
@@ -38,15 +24,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_results_property(self):
         self.assertEqual(self.statistics.result, 0)
-       
-        # POTENTIAL CHANGES
-            # use random number generator to populate csv?
-            # combine data into a single file
-            # create separate csv reader
-
-            # may also be able to use:
-                # dataset = list(test_data)
-                # print(dataset[1])
 
     def test_mean(self):
         test_mean_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
@@ -107,27 +84,17 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.get_standard_deviation(data_slice), answer)
             self.assertEqual(self.statistics.result, float(row['Standard_Deviation']))
 
-    #NOT WORKING YET
     def test_zscore(self):
-        test_zscore_data = MyTestCase.CsvReader('/Tests/Data/ut_numbers.csv')
+        test_zscore_data = MyTestCase.CsvReader('/Tests/Data/ut_zvalues.csv')
         test_zscore_answer = MyTestCase.CsvReader('/Tests/Data/ut_zscores.csv')
-        data = [1, 2, 3, 4, 5, 6, 7, 8]
-        zscores = []
+        data = []
+        for row in test_zscore_data:
+            data.append(float(row['ZValues']))
+        data_slice = data[0:10]
         answers = []
-
-
-        zscores.append(Statistics.get_zscore(self = Statistics(), data = data))
-
         for row in test_zscore_answer:
             answers.append(float(row['ZScores']))
-        print("==============Ztest")
-
-        print(zscores)
-        print(answers)
-
-        self.assertEqual(zscores[0], answers)
-
-
+        self.assertEqual((self.statistics.get_zscore(data_slice)), answers)
 
     def test_simple_sample(self):
 
@@ -199,7 +166,6 @@ class MyTestCase(unittest.TestCase):
         choice = Stats.RandomGenerators.random_seed(seed=seed_val)
         self.result = seed_val
         self.assertEqual(self.result, 6)
-
 
 if __name__ == '__main__':
     unittest.main()

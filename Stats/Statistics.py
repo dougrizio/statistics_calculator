@@ -10,7 +10,10 @@ from Stats.ConfidenceInterval import confidence_interval
 from Stats.margin_of_error import margin_of_error
 from Stats.Cohrans import sample
 from Stats.sample_CI_width import sample_CI_width
+
 from Stats.int_float_checker import check_for_number_parameters
+
+
 
 class Statistics(Calculator):
 
@@ -72,12 +75,3 @@ class Statistics(Calculator):
 
         self.result = sample_CI_width(confidence, width)
         return self.result
-
-
-
-
-
-
-
-
-

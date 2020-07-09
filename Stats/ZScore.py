@@ -3,8 +3,6 @@ from Calc.Division import division
 from Stats.Mean import mean
 from Stats.Standard_Deviation import standard_deviation
 
-
-
 def zscore(data):
     dataMean = mean(data)
     stanDev = standard_deviation(data)
@@ -19,7 +17,6 @@ def zscore(data):
         eachZ = division(stanDev, eachMinus)
         listZScores.append(eachZ)
 
-
-    return list(listZScores)
+    return listZScores
 
 

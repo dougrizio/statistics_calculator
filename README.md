@@ -51,11 +51,11 @@ IS 601850 - Team Project 2 - Stats Calculator Group
 	        * calls median static method
 	    * get_mode
 	        * calls mode static method
-	    *get_variance
+	    * get_variance
 	        * calls variance static method
-	    *get_standard_deviation
+	    * get_standard_deviation
 	        * calls standard_deviation static method
-	    *get_zscore
+	    * get_zscore
 	        * calls zscore static method
 	    * get_simple sample
 	        * call sample static method

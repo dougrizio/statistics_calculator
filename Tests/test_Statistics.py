@@ -86,13 +86,12 @@ class MyTestCase(unittest.TestCase):
 
     def test_zscore(self):
         test_zscore_data = MyTestCase.CsvReader('/Tests/Data/ut_zvalues.csv')
-        test_zscore_answer = MyTestCase.CsvReader('/Tests/Data/ut_zscores.csv')
         data = []
         for row in test_zscore_data:
-            data.append(float(row['ZValues']))
+            data.append(float(row['Values']))
         data_slice = data[0:10]
         answers = []
-        for row in test_zscore_answer:
+        for row in test_zscore_data:
             answers.append(float(row['ZScores']))
         self.assertEqual((self.statistics.get_zscore(data_slice)), answers)
 
